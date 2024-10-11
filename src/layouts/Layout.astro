@@ -1,0 +1,38 @@
+---
+import '@fontsource-variable/jost';
+
+import Noise from '@/components/Noise.astro';
+
+import SEO from "@/components/SEO.astro"
+
+
+
+interface Props {
+	description: string
+	title: string
+	preloadImgLCP?: string
+}
+
+const { title, description, preloadImgLCP } = Astro.props
+---
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+<!doctype html>
+<html lang="es">
+	<head>
+		<SEO title={title} description={description} preloadImgLCP={preloadImgLCP} />
+	</head>
+	<body>
+		<!-- <Noise/> -->
+		<div class="max-w-6xl px-2 lg:px-10 pt-10 mx-auto">
+			<slot />
+		</div>		
+	</body>
+</html>
+<style is:global>
+
+	html {
+		font-family: 'Jost Variable', system-ui, sans-serif;
+		background: #D5D5D5;		
+	}
+
+</style>
