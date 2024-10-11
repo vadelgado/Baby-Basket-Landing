@@ -22,55 +22,199 @@ RES_TEAMS.forEach((team) => {
     </span>
   </h2>
 
-  <div id="accordion-collapse-grupos" data-accordion="collapse">
-    
-    <h2 id="accordion-collapse-grupos-heading-1">
-        <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-solid border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-grupos-body-1" aria-expanded="false" aria-controls="accordion-collapse-grupos-body-1">
-        <span>👉📝Tabla de Grupos👈</span>
-        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-        </svg>
-        </button>
-    </h2>
-    <div id="accordion-collapse-grupos-body-1" class="hidden" aria-labelledby="accordion-collapse-grupos-heading-1">
-        <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-          <Subtitle/>
-          <table class="mt-10 w-full text-center text-black lg:text-lg">
-            <tbody>
-              <tr
-                class="mb-10 bg-gradient-to-b from-white/20 via-transparent to-transparent p-4"
-              >
-                <td class="py-3 font-bold">Grupo A</td>
-                <td class="py-3 font-bold">Grupo B</td>
-                <td class="py-3 font-bold">Grupo C</td>
-                <td class="py-3 font-bold">Grupo D</td>
+  <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+    <Subtitle/>
+    <div class="container mx-auto px-4 py-8">
+      <!-- Tabla de Grupos Femeninos -->
+      <h2 class="text-2xl font-bold mb-6 text-blue-600 text-center">Tabla de Grupos Rama Femenino</h2>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <!-- Grupo A -->
+        <div class="overflow-x-auto">
+          <table class="min-w-full bg-white shadow-lg rounded-lg">
+            <thead>
+              <tr>
+                <th class="py-3 px-4 bg-blue-500 text-white text-left">Posición</th>
+                <th class="py-3 px-4 bg-blue-500 text-white text-left">Grupo A</th>
               </tr>
-              {
-                [0, 1, 2, 3].map((row) => (
-                  <tr class="mb-10 bg-gradient-to-b from-white/20 via-transparent to-transparent p-4">
-                    {[0, 4, 8, 12].map((start) => (
-                      <td class="py-1 px-0 font-semibold">
-                        <span class="text-primary">{start + row + 1}</span>{" "}
-                        {teams[start + row] ? teams[start + row].name : ""}
-                      </td>
-                    ))}
-                  </tr>
-                ))
-              }
+            </thead>
+            <tbody>
+              <tr>
+                <td class="py-3 px-4 border-b text-center text-gray-700">1A</td>
+                <td class="py-3 px-4 border-b text-gray-700">Wasps</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 border-b text-center text-gray-700">2A</td>
+                <td class="py-3 px-4 border-b text-gray-700">Fénix</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 border-b text-center text-gray-700">3A</td>
+                <td class="py-3 px-4 border-b text-gray-700">Milenium</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-center text-gray-700">4A</td>
+                <td class="py-3 px-4 text-gray-700">Ordea</td>
+              </tr>
             </tbody>
           </table>
-          <SubtitleFooter/>
         </div>
+    
+        <!-- Grupo B -->
+        <div class="overflow-x-auto">
+          <table class="min-w-full bg-white shadow-lg rounded-lg">
+            <thead>
+              <tr>
+                <th class="py-3 px-4 bg-green-500 text-white text-left">Posición</th>
+                <th class="py-3 px-4 bg-green-500 text-white text-left">Grupo B</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="py-3 px-4 border-b text-center text-gray-700">1B</td>
+                <td class="py-3 px-4 border-b text-gray-700">Power's</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 border-b text-center text-gray-700">2B</td>
+                <td class="py-3 px-4 border-b text-gray-700">Atenas</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 border-b text-center text-gray-700">3B</td>
+                <td class="py-3 px-4 border-b text-gray-700">Panteras</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>        
+    
+      <!-- Tabla de Grupo Masculinos -->
+      <h2 class="text-2xl font-bold mt-10 mb-6 text-red-600 text-center">Tabla de Grupo Rama Masculino</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white shadow-lg rounded-lg">
+          <thead>
+            <tr>
+              <th class="py-3 px-4 bg-red-500 text-white text-left">Posición</th>
+              <th class="py-3 px-4 bg-red-500 text-white text-left">Equipo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="py-3 px-4 border-b text-center text-gray-700">1</td>
+              <td class="py-3 px-4 border-b text-gray-700">Champagnat</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 border-b text-center text-gray-700">2</td>
+              <td class="py-3 px-4 border-b text-gray-700">S y C</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 border-b text-center text-gray-700">3</td>
+              <td class="py-3 px-4 border-b text-gray-700">Panteras</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-center text-gray-700">4</td>
+              <td class="py-3 px-4 text-gray-700">Berchos</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
+    <SubtitleFooter/>
   </div>
 
   <section  class="animate-fade-in animate-delay-500 mt-10 mx-auto flex flex-col justify-center items-center text-center text-black">
     <h3 class="uppercase text-2xl font-medium flex flex-col max-w-sm ">
-      <span>PROGRAMACIÓN GENERAL BABY FUNES</span>    
+      <span>PROGRAMACIÓN BABY BALONCESTO</span>    
     </h3>
   </section>
 
-  <Title title="***Primera Ronda***"></Title>
+  <div class="container mx-auto px-4 py-8">
+    <h2 class="text-2xl font-bold mb-6 text-purple-600">Sábado 12 de octubre 2024</h2>
+    <p class="mb-4 text-gray-700"><strong>F:</strong> Femenino &nbsp;&nbsp;|&nbsp;&nbsp; <strong>M:</strong> Masculino</p>
+  
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white shadow-lg rounded-lg">
+        <thead>
+          <tr>
+            <th class="py-3 px-4 bg-purple-500 text-white text-left">Hora</th>
+            <th class="py-3 px-4 bg-purple-500 text-white text-left">Equipo</th>
+            <th class="py-3 px-4 bg-purple-500 text-white text-left">Marcador</th>
+            <th class="py-3 px-4 bg-purple-500 text-white text-left">Equipo</th>
+            <th class="py-3 px-4 bg-purple-500 text-white text-center">Categoría</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Fila 1 -->
+          <tr>
+            <td class="py-3 px-4 border-b text-gray-700">08:30 a.m.</td>
+            <td class="py-3 px-4 border-b text-gray-700">4 A Ordea</td>
+            <td class="py-3 px-4 border-b text-center text-gray-700">-</td>
+            <td class="py-3 px-4 border-b text-gray-700">1 A Wasps</td>
+            <td class="py-3 px-4 border-b text-center text-blue-600">F</td>
+          </tr>
+  
+          <!-- Fila 2 -->
+          <tr>
+            <td class="py-3 px-4 border-b text-gray-700">09:40 a.m.</td>
+            <td class="py-3 px-4 border-b text-gray-700">2 S y C</td>
+            <td class="py-3 px-4 border-b text-center text-gray-700">-</td>
+            <td class="py-3 px-4 border-b text-gray-700">3 Panteras</td>
+            <td class="py-3 px-4 border-b text-center text-red-600">M</td>
+          </tr>
+  
+          <!-- Fila 3 -->
+          <tr>
+            <td class="py-3 px-4 border-b text-gray-700">10:50 a.m.</td>
+            <td class="py-3 px-4 border-b text-gray-700">2 A Fénix</td>
+            <td class="py-3 px-4 border-b text-center text-gray-700">-</td>
+            <td class="py-3 px-4 border-b text-gray-700">3 A Milenium</td>
+            <td class="py-3 px-4 border-b text-center text-blue-600">F</td>
+          </tr>
+  
+          <!-- Fila 4 -->
+          <tr>
+            <td class="py-3 px-4 border-b text-gray-700">12:00 p.m.</td>
+            <td class="py-3 px-4 border-b text-gray-700">4 Berchos</td>
+            <td class="py-3 px-4 border-b text-center text-gray-700">-</td>
+            <td class="py-3 px-4 border-b text-gray-700">2 S y C</td>
+            <td class="py-3 px-4 border-b text-center text-red-600">M</td>
+          </tr>
+  
+          <!-- Fila 5: Inauguración -->
+          <tr>
+            <td class="py-3 px-4 border-b text-gray-700">02:00 p.m.</td>
+            <td colspan="4" class="py-3 px-4 border-b text-center text-purple-600 font-bold">Inauguración</td>
+          </tr>
+  
+          <!-- Fila 6 -->
+          <tr>
+            <td class="py-3 px-4 border-b text-gray-700">04:00 p.m.</td>
+            <td class="py-3 px-4 border-b text-gray-700">2 B Atenas</td>
+            <td class="py-3 px-4 border-b text-center text-gray-700">-</td>
+            <td class="py-3 px-4 border-b text-gray-700">3 B Panteras</td>
+            <td class="py-3 px-4 border-b text-center text-blue-600">F</td>
+          </tr>
+  
+          <!-- Fila 7 -->
+          <tr>
+            <td class="py-3 px-4 border-b text-gray-700">05:10 p.m.</td>
+            <td class="py-3 px-4 border-b text-gray-700">3 A Milenium</td>
+            <td class="py-3 px-4 border-b text-center text-gray-700">-</td>
+            <td class="py-3 px-4 border-b text-gray-700">4 A Ordea</td>
+            <td class="py-3 px-4 border-b text-center text-blue-600">F</td>
+          </tr>
+  
+          <!-- Fila 8 -->
+          <tr>
+            <td class="py-3 px-4 text-gray-700">06:20 p.m.</td>
+            <td class="py-3 px-4 text-gray-700">4 Berchos</td>
+            <td class="py-3 px-4 text-center text-gray-700">-</td>
+            <td class="py-3 px-4 text-gray-700">1 Champagnat</td>
+            <td class="py-3 px-4 text-center text-red-600">M</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
 
   <div id="accordion-collapse" data-accordion="collapse">
     
@@ -165,7 +309,7 @@ RES_TEAMS.forEach((team) => {
         <Title title="Miercoles 17 de Abril 2024" />
         <div class="relative flex items-center justify-center">
           <img
-            src="babyfutbol.webp"
+            src="babybaloncesto.webp"
             alt="Background Image"
             class="absolute w-auto h-72 object-cover opacity-15"
           />
@@ -343,7 +487,7 @@ RES_TEAMS.forEach((team) => {
         <Title title="Jueves 18 de Abril 2024" />
         <div class="relative flex items-center justify-center">
           <img
-            src="babyfutbol.webp"
+            src="babybaloncesto.webp"
             alt="Background Image"
             class="absolute w-auto h-72 object-cover opacity-15"
           />
@@ -522,7 +666,7 @@ RES_TEAMS.forEach((team) => {
         <Title title="Viernes 19 de Abril 2024" />
       <div class="relative flex items-center justify-center">
         <img
-        src="babyfutbol.webp"
+        src="babybaloncesto.webp"
         alt="Background Image"
         class="absolute w-auto h-72 object-cover opacity-15"
       />
