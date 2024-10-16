@@ -3,7 +3,7 @@ import type { Team } from "@/types/teams";
 export const TEAMS: Array<Team> = [
     {
         id: "1",
-        name: "Alcaldía de Funes - Fundación Fénix",        
+        name: "Power’s - Ipiales",        
         image: {
             w: 200,
             h: 200,
@@ -11,7 +11,7 @@ export const TEAMS: Array<Team> = [
     },
     {
         id: "2",
-        name: "Alcaldía de Pupiales",
+        name: "Wasps - Sibundoy",
         image: {
             w: 200,
             h: 200,
@@ -19,7 +19,7 @@ export const TEAMS: Array<Team> = [
     },
     {
         id: "3",
-        name: "Américo Quiñones La Unión",
+        name: "Phoenix - Pasto",
         image: {
             w: 200,
             h: 200,
@@ -27,7 +27,7 @@ export const TEAMS: Array<Team> = [
     },
     {
         id: "4",
-        name: "Asociación Deportivo Pasto",
+        name: "Milenium - Ipiales",
         image: {
             w: 200,
             h: 200,
@@ -35,7 +35,7 @@ export const TEAMS: Array<Team> = [
     },
     {
         id: "5",
-        name: "Club Atlético Sucre Ipiales",
+        name: "Ordea - Aldana",
         image: {
             w: 200,
             h: 200,
@@ -43,7 +43,7 @@ export const TEAMS: Array<Team> = [
     },
     {
         id: "6",
-        name: "Club CAR Nariño",
+        name: "Panteras Femenino - Pasto",
         image: {
             w: 200,
             h: 200,
@@ -51,7 +51,7 @@ export const TEAMS: Array<Team> = [
     },
     {
         id: "7",
-        name: "Club Eder Ruales Ipiales",
+        name: "Atenas - Contadero",
         image: {
             w: 200,
             h: 200,
@@ -59,7 +59,7 @@ export const TEAMS: Array<Team> = [
     },
     {
         id: "8",
-        name: "Club Estudiantes Pasto",
+        name: "Champagnat - Pasto",
         image: {
             w: 200,
             h: 200,
@@ -67,7 +67,7 @@ export const TEAMS: Array<Team> = [
     },
     {
         id: "9",
-        name: "Club Futuras Estrellas Nariño",
+        name: "S & C - Ipiales",
         image: {
             w: 200,
             h: 200,
@@ -75,7 +75,7 @@ export const TEAMS: Array<Team> = [
     },
     {
         id: "10",
-        name: "Club Leones FC Pasto",
+        name: "Panteras Masculino - Pasto",
         image: {
             w: 200,
             h: 200,
@@ -83,51 +83,10 @@ export const TEAMS: Array<Team> = [
     },
     {
         id: "11",
-        name: "Club MPB Ricaurte",
+        name: "Berchos - Pasto",
         image: {
             w: 200,
             h: 200,
         },
-    },
-    {
-        id: "12",
-        name: "Club Sporting de Nariño",
-        image: {
-            w: 200,
-            h: 200,
-        },
-    },
-    {
-        id: "13",
-        name: "Club Sueño Fútbol Cumbal",
-        image: {
-            w: 200,
-            h: 200,
-        },
-    },
-    {
-        id: "14",
-        name: "Club Talentos del Sur Ipiales",
-        image: {
-            w: 200,
-            h: 200,
-        },
-    },
-    {
-        id: "15",
-        name: "Escuela Deportivo Pasto 2013",
-        image: {
-            w: 200,
-            h: 200,
-        },
-    },
-    {
-        id: "16",
-        name: "Escuela William Andrade Mora Samaniego",
-        image: {
-            w: 200,
-            h: 200,
-        },
-    },
-
+    }
 ] as const;

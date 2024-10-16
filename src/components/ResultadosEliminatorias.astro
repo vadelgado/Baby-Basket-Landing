@@ -1,0 +1,163 @@
+---
+import Title from "./Title.astro";
+
+const resultados = [
+  {
+    equipo1: "4 A Ordea",
+    marcador1: 12,
+    marcador2: 40,
+    equipo2: "1 A Wasps",
+    categoria: "F",
+  },
+  {
+    equipo1: "2 S y C",
+    marcador1: 58,
+    marcador2: 26,
+    equipo2: "3 Panteras",
+    categoria: "M",
+  },
+  {
+    equipo1: "3 A Milenium",
+    marcador1: 23,
+    marcador2: 17,
+    equipo2: "4 A Ordea",
+    categoria: "F",
+  },
+  {
+    equipo1: "4 Berchos",
+    marcador1: 43,
+    marcador2: 31,
+    equipo2: "2 S y C",
+    categoria: "M",
+  },
+  {
+    equipo1: "2 A Fénix",
+    marcador1: 31,
+    marcador2: 10,
+    equipo2: "3 A Milenium",
+    categoria: "F",
+  },
+  {
+    equipo1: "1 A Wasps",
+    marcador1: 23,
+    marcador2: 15,
+    equipo2: "2 A Fénix",
+    categoria: "F",
+  },
+
+  {
+    equipo1: "1 Champagnat",
+    marcador1: 40,
+    marcador2: 24,
+    equipo2: "2 S y C",
+    categoria: "M",
+  },
+  {
+    equipo1: "1 B Power’s",
+    marcador1: 22,
+    marcador2: 18,
+    equipo2: "2 B Atenas",
+    categoria: "F",
+  },
+  {
+    equipo1: "3 Panteras",
+    marcador1: 18,
+    marcador2: 54,
+    equipo2: "4 Berchos",
+    categoria: "M",
+  },
+  {
+    equipo1: "4 A Ordea",
+    marcador1: 13,
+    marcador2: 17,
+    equipo2: "2 A Fénix",
+    categoria: "F",
+  },
+  {
+    equipo1: "4 Berchos",
+    marcador1: 27,
+    marcador2: 29,
+    equipo2: "1 Champagnat",
+    categoria: "M",
+  },
+
+  {
+    equipo1: "2 B Atenas",
+    marcador1: 56,
+    marcador2: 9,
+    equipo2: "3 B Panteras",
+    categoria: "F",
+  },
+  {
+    equipo1: "3 A Milenium",
+    marcador1: 19,
+    marcador2: 34,
+    equipo2: "1 A Wasps",
+    categoria: "F",
+  },
+  {
+    equipo1: "3 B Panteras",
+    marcador1: 9,
+    marcador2: 59,
+    equipo2: "1 B Power’s",
+    categoria: "F",
+  },
+  {
+    equipo1: "3 Panteras",
+    marcador1: 8,
+    marcador2: 75,
+    equipo2: "1 Champagnat",
+    categoria: "M",
+  },
+];
+---
+
+<div class="overflow-x-auto p-4">
+    <!-- Saturday Matches -->
+    <Title title="Resultados del Torneo" />
+    <h2 class="text-xl font-bold text-gray-800 mb-4">Sábado 12 de octubre 2024</h2>
+    <table class="min-w-full bg-white shadow-lg rounded-lg mb-8">
+      <thead>
+        <tr>
+          <th class="py-4 px-6 bg-purple-600 text-white text-left font-semibold text-lg">Equipo</th>
+          <th class="py-4 px-6 bg-purple-600 text-white text-center font-semibold text-lg">Marcador</th>
+          <th class="py-4 px-6 bg-purple-600 text-white text-left font-semibold text-lg">Equipo</th>
+          <th class="py-4 px-6 bg-purple-600 text-white text-center font-semibold text-lg">Categoría</th>
+        </tr>
+      </thead>
+      <tbody>
+        {resultados.slice(0, 6).map((resultado) => (
+          <tr class={`border-b ${resultado.categoria === 'F' ? 'bg-blue-100' : 'bg-red-100'}`}>
+            <td class="py-4 px-6 text-gray-800 font-semibold">{resultado.equipo1}</td>
+            <td class="py-4 px-6 text-center text-gray-800 font-bold">{resultado.marcador1} - {resultado.marcador2}</td>
+            <td class="py-4 px-6 text-gray-800 font-semibold">{resultado.equipo2}</td>
+            <td class="py-4 px-6 text-center text-gray-600 font-medium">{resultado.categoria}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  
+    <!-- Sunday Matches -->
+    <h2 class="text-xl font-bold text-gray-800 mb-4">Domingo 13 de octubre 2024</h2>
+    <table class="min-w-full bg-white shadow-lg rounded-lg">
+      <thead>
+        <tr>
+          <th class="py-4 px-6 bg-purple-600 text-white text-left font-semibold text-lg">Equipo</th>
+          <th class="py-4 px-6 bg-purple-600 text-white text-center font-semibold text-lg">Marcador</th>
+          <th class="py-4 px-6 bg-purple-600 text-white text-left font-semibold text-lg">Equipo</th>
+          <th class="py-4 px-6 bg-purple-600 text-white text-center font-semibold text-lg">Categoría</th>
+        </tr>
+      </thead>
+      <tbody>
+        {resultados.slice(6).map((resultado) => (
+          <tr class={`border-b ${resultado.categoria === 'F' ? 'bg-blue-100' : 'bg-red-100'}`}>
+            <td class="py-4 px-6 text-gray-800 font-semibold">{resultado.equipo1}</td>
+            <td class="py-4 px-6 text-center text-gray-800 font-bold">{resultado.marcador1} - {resultado.marcador2}</td>
+            <td class="py-4 px-6 text-gray-800 font-semibold">{resultado.equipo2}</td>
+            <td class="py-4 px-6 text-center text-gray-600 font-medium">{resultado.categoria}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  
